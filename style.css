@@ -1,0 +1,361 @@
+:root {
+  --pink-color: #9b0537;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: "Christmas Is Coming";
+}
+
+body {
+  background-color: white;
+  font-size: 1.4rem;
+  background-image: url(./Images/Background2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 7vw;
+  background-color: rgba(248, 238, 217, 0.522);
+  border-bottom: 2px solid rgb(252, 196, 124);
+  box-shadow: 0 2px 20px rgb(253, 124, 124);
+  z-index: 10;
+}
+
+header #logo {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  transition: transform 500ms;
+}
+
+header #logo:hover {
+  transform: rotateY(180deg);
+}
+
+header #logo h4 {
+  color: rgb(255, 255, 255);
+  font-size: bold;
+  margin-left: -20px;
+  text-shadow: 2px 2px 2px #222;
+  background-color: rgb(255, 44, 86);
+  border-radius: 2rem;
+  padding: 0 3px;
+  font-variant: small-caps;
+  border-bottom: 3px solid orange;
+  font-family: "Amelina Script";
+}
+
+header #logo img {
+  /* width: 150px; */
+  border-radius: 17px;
+  border-bottom: 3px solid orangered;
+}
+
+header span {
+  margin-left: -5px;
+}
+
+header .logo-color {
+  background-color: crimson;
+  color: pink;
+}
+
+header h4 :first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+header h4 :last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+header #items {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 15px;
+}
+
+header #items button {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 7px 7px;
+  transition: 500ms, border 700ms;
+}
+
+header #items button:hover {
+  border-bottom: 7px solid rgba(155, 0, 65, 0.801);
+  background-color: lightcoral;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+header #items button a {
+  color: rgb(128, 40, 84);
+}
+
+header #items button:hover a {
+  color: white;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ place-content: center;
+ place-items: center;
+ margin-top: 100px;
+ background-color: red;
+ position: relative;
+}
+
+main img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 25px;
+  border: 5px solid #00000050;
+  transition: transform 1000ms;
+}
+
+main img:hover {
+  /* transform: rotateY(180deg); */
+  transform: scaleX(1.2);
+}
+
+#first-menu {
+  background-color: rgba(220, 20, 60, 0.694);
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#first-menu button {
+  padding: 10px 100px;
+  font-size: 1.4rem;
+  /* letter-spacing: 0.5ch; */
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  text-shadow: 1px 1px 1px #333;
+  transition: 500ms;
+  background-color: lightcoral;
+  color: white;
+}
+
+#first-menu button:hover {
+  background-color: white;
+  color: crimson;
+}
+
+h4 {
+  color: white;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#real-flowers-menu {
+  background-color: rgba(220, 20, 60, 0.694);
+  color: white;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#real-flowers-menu > div {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 15px;
+  font-weight: bold;
+  width: 200px;
+  border-bottom: 2px solid white;
+}
+
+#real-flowers-menu div input {
+  padding: 10px;
+  color: var(--pink-color);
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  width: 100px;
+}
+
+#real-flowers-menu :last-child {
+  /* grid-area: 2 / 1 / span 2 / span 3; */
+  /* grid-column: 2/3; */
+  grid-row: 3/3;
+  grid-area: 3 / 2 / span 3 / span 2;
+  grid-column: 2/3;
+  width: 80%;
+  border: none;
+}
+
+#real-flowers-menu div option {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+#real-flowers-menu button,
+#submit-form-button {
+  width: 80%;
+  background-color: white;
+  color: crimson;
+  border-radius: 15px;
+  transition: 250ms;
+  font-size: 1rem;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  place-self: center;
+}
+
+#real-flowers-menu button:hover,
+#submit-form-button:hover {
+  background-color: royalblue;
+  color: white;
+}
+
+#user-info-form {
+  background-color: rgba(220, 20, 60, 0.694);
+  color: wheat;
+  padding: 30px;
+
+  font-weight: bold;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: start;
+  gap: 15px;
+  width: 350px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#user-info-form h4 {
+  color: rgb(185, 185, 255);
+  text-shadow: 1px 1px 1px white;
+  /* background-color: royalblue; */
+  padding: 5px;
+  place-self: center;
+}
+
+#user-info-form div {
+  /* background-color: royalblue; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#user-info-form div label {
+  font-weight: bold;
+  color: gold;
+  font-size: 1.2rem;
+}
+
+#user-info-form div input {
+  width: 90%;
+  padding: 5px 7px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: royalblue;
+  font-size: 1.1rem;
+}
+
+#results-menu {
+  background-color: rgba(220, 20, 60, 0.694);
+  font-size: 1.3rem;
+  width: 600px;
+  height: auto;
+  border-radius: 20px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  gap: 15px;
+  padding-left: 30px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: gold;
+}
+
+#results-menu div{
+  width: 50%;
+  height: 100%;
+}
+
+#results-menu div :first-child {
+  color: gold;
+}
+
+#results-menu div :last-child {
+  color: navy;
+}
+
+#results-menu :first-child {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  /* place-items: start; */
+  gap: 10px;
+}
+
+#results-menu img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
